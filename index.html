@@ -30,6 +30,31 @@ firebase.initializeApp(firebaseConfig);
 const firebaseAuth = firebase.auth();
 const firebaseDB = firebase.database();
 </script>
+ 
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "MASUKKAN_API_KEY",
+  authDomain: "electra-chronicles.firebaseapp.com",
+  databaseURL: "https://electra-chronicles-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "electra-chronicles",
+  storageBucket: "electra-chronicles.firebasestorage.app",
+  messagingSenderId: "MASUKKAN_MESSAGING_SENDER_ID",
+  appId: "MASUKKAN_APP_ID"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+const auth = getAuth(app);
+
+signInAnonymously(auth)
+  .then(() => console.log("Firebase berjaya disambungkan"))
+  .catch(error => console.error("Firebase:", error));
+</script>
+
 </head>
 
 <body>
