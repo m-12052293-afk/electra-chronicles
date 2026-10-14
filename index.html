@@ -10,7 +10,28 @@
 @media(max-width:1120px){.layout{grid-template-columns:220px minmax(0,1fr)}.rightcol{grid-column:1/3;display:grid;grid-template-columns:1fr 1fr;gap:12px}.board{min-height:480px;grid-template-rows:repeat(6,minmax(64px,1fr))}.tile{padding:6px 3px}}
 @media(max-width:760px){.app{padding:10px}.top{align-items:flex-start}.pill{display:none}.layout{grid-template-columns:1fr}.leftcol,.rightcol{grid-column:auto}.leftcol{display:grid;grid-template-columns:1fr 1fr;gap:10px}.leftcol .panel{min-width:0}.leftcol .panel:first-child{grid-column:1/-1}.rightcol{display:grid;grid-template-columns:1fr}.board-panel{padding:6px}.board{gap:4px;grid-template-rows:repeat(6,minmax(55px,1fr));min-height:370px}.tile{padding:4px 2px;border-radius:7px}.tile .cp{font-size:8px}.tile .topic{font-size:8px}.tile .emoji{font-size:16px}.token{width:12px;height:12px}.center-board{padding:6px;border-radius:9px}.center-board p{font-size:8px;letter-spacing:.5px}.center-badges span{font-size:8px;padding:4px}.city{font-size:24px}.center-board h2{font-size:clamp(14px,4vw,25px)}.die{width:40px;height:40px;font-size:27px}.turnbar{padding:10px}.turn-actions{width:100%}.turn-actions .btn{flex:1}.leftcol .panel-body{padding:12px}.stat b{font-size:18px}}
 </style>
+ 
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyDsGG0jt6PztWmP6Vi3WlA4TGN4lsn8BW4",
+  authDomain: "electra-chronicles.firebaseapp.com",
+  databaseURL: "https://electra-chronicles-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "electra-chronicles",
+  storageBucket: "electra-chronicles.firebasestorage.app",
+  messagingSenderId: "164280453734",
+  appId: "1:164280453734:web:db8ee30e5a32abfa893ba7",
+  measurementId: "G-3VFTH92CYE"
+};
+
+firebase.initializeApp(firebaseConfig);
+const firebaseAuth = firebase.auth();
+const firebaseDB = firebase.database();
+</script>
 </head>
+
 <body>
 <div class="app">
  <div class="wrap">
